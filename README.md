@@ -9,3 +9,8 @@ Program go Auto reload JSON File setiap 15 detik
 ```bash
 go run main.go
 ```
+
+## Get data API
+```bash
+curl -X GET http://localhost:8080/api/index
+```
