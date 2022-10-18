@@ -1,6 +1,6 @@
-window.setTimeout(function() {
-    $(".moment").fadeTo(500, 0).slideUp(500, function(){
-        $(this).remove(); 
+window.setTimeout(function () {
+    $(".moment").fadeTo(500, 0).slideUp(500, function () {
+        $(this).remove();
     });
 }, 5000);
 
@@ -20,19 +20,19 @@ fetch(dataURL)
         var windData = data.status.wind;
         console.log(windData);
 
-        if (waterData < 5){
+        if (waterData < 5) {
             waterMessage = `Ketinggian air = ${waterData} meter, status aman`;
-        }else if ( waterData <= 8 ) {
+        } else if (waterData <= 8) {
             waterMessage = `Ketinggian air = ${waterData} meter, status siaga`;
-        }else if ( waterData > 8 ) {
+        } else if (waterData > 8) {
             waterMessage = `Ketinggian air = ${waterData} meter, status bahaya`;
         }
 
-        if (windData < 5){
+        if (windData < 5) {
             windMessage = `Kecepatan angin = ${windData}m/s, status aman`;
-        }else if ( windData <= 8 ) {
+        } else if (windData <= 8) {
             windMessage = `Kecepatan angin = ${windData}m/s, status siaga`;
-        }else if ( windData > 8 ) {
+        } else if (windData > 8) {
             windMessage = `Kecepatan angin = ${windData}m/s, status bahaya`;
         }
 
@@ -40,4 +40,6 @@ fetch(dataURL)
         document.querySelector(".windData").innerHTML = windMessage;
     });
 
-
+window.setTimeout(function () {
+    window.location.reload();
+}, 15000);
